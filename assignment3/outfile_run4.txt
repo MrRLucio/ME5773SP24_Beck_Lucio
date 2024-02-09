@@ -1,27 +1,27 @@
-Terminated a task that takes 12 seconds
-srun: Job 349990 step creation temporarily disabled, retrying (Requested nodes are busy)
-srun: Job 349990 step creation temporarily disabled, retrying (Requested nodes are busy)
-srun: Step created for job 349990
-srun: Job 349990 step creation temporarily disabled, retrying (Requested nodes are busy)
-srun: Job 349990 step creation temporarily disabled, retrying (Requested nodes are busy)
-srun: Job 349990 step creation temporarily disabled, retrying (Requested nodes are busy)
-Terminated a task that takes 4 seconds
-srun: Job 349990 step creation still disabled, retrying (Requested nodes are busy)
-srun: Job 349990 step creation still disabled, retrying (Requested nodes are busy)
-srun: Job 349990 step creation still disabled, retrying (Requested nodes are busy)
-srun: Job 349990 step creation still disabled, retrying (Requested nodes are busy)
-srun: Step created for job 349990
-Terminated a task that takes 6 seconds
-srun: Job 349990 step creation still disabled, retrying (Requested nodes are busy)
-srun: Job 349990 step creation still disabled, retrying (Requested nodes are busy)
-srun: Step created for job 349990
-srun: Job 349990 step creation still disabled, retrying (Requested nodes are busy)
-Terminated a task that takes 10 seconds
-srun: Job 349990 step creation still disabled, retrying (Requested nodes are busy)
-srun: Job 349990 step creation still disabled, retrying (Requested nodes are busy)
-srun: Step created for job 349990
-Terminated a task that takes 2 seconds
-srun: Job 349990 step creation still disabled, retrying (Requested nodes are busy)
-srun: Step created for job 349990
 Terminated a task that takes 14 seconds
-Total execution time was -11 seconds
+srun: Job 350161 step creation temporarily disabled, retrying (Requested nodes are busy)
+srun: Job 350161 step creation temporarily disabled, retrying (Requested nodes are busy)
+srun: Step created for job 350161
+srun: Job 350161 step creation temporarily disabled, retrying (Requested nodes are busy)
+srun: Job 350161 step creation temporarily disabled, retrying (Requested nodes are busy)
+srun: Job 350161 step creation temporarily disabled, retrying (Requested nodes are busy)
+Terminated a task that takes 4 seconds
+srun: Job 350161 step creation still disabled, retrying (Requested nodes are busy)
+srun: Job 350161 step creation still disabled, retrying (Requested nodes are busy)
+srun: Step created for job 350161
+srun: Job 350161 step creation still disabled, retrying (Requested nodes are busy)
+srun: Job 350161 step creation still disabled, retrying (Requested nodes are busy)
+Terminated a task that takes 2 seconds
+srun: Job 350161 step creation still disabled, retrying (Requested nodes are busy)
+srun: Job 350161 step creation still disabled, retrying (Requested nodes are busy)
+srun: Job 350161 step creation still disabled, retrying (Requested nodes are busy)
+srun: Step created for job 350161
+Terminated a task that takes 10 seconds
+srun: Job 350161 step creation still disabled, retrying (Requested nodes are busy)
+srun: Job 350161 step creation still disabled, retrying (Requested nodes are busy)
+srun: Step created for job 350161
+Terminated a task that takes 12 seconds
+srun: Job 350161 step creation still disabled, retrying (Requested nodes are busy)
+srun: Step created for job 350161
+Terminated a task that takes 6 seconds
+Total execution time was 49 seconds

@@ -1,15 +1,14 @@
 #!/bin/bash
 #SBATCH -J twice_job
-#SBATCH -p compute1
-#SBATCH -o outfile_run1.txt
+#SBATCH -p amdonly
+#SBATCH -o outfile_run5__amdonly.txt
 #SBATCH -N 1
-#SBATCH -n 1 
-#SBATCH -c 80
+#SBATCH -n 4 
+#SBATCH -c 8
 #SBATCH -t 00:05:00
-#SBATCH --mail-type=ALL
-#SBATCH --mail-user william.beck@my.utsa.edu
 
-startT=`date +%S`
+startT=`date +%s`
+#echo $startT
 
 srun --exclusive -J five    -N 1 -n 1 -c $SLURM_CPUS_PER_TASK bash twice.sh 5 &
 srun --exclusive -J two     -N 1 -n 1 -c $SLURM_CPUS_PER_TASK bash twice.sh 2 &
@@ -20,9 +19,11 @@ srun --exclusive -J three   -N 1 -n 1 -c $SLURM_CPUS_PER_TASK bash twice.sh 3
 
 wait
 
-endT=`date +%S`
+endT=`date +%s`
+#echo $endT
 
 DeltaT=$((endT-startT))
+#echo $DeltaT
 
 echo "Total execution time was $DeltaT seconds"
 

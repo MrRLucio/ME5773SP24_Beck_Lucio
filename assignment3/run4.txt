@@ -1,11 +1,11 @@
-JobID             State    Elapsed        NodeList      NCPUS 
------------- ---------- ---------- --------------- ---------- 
-349990        COMPLETED   00:00:49            c006         80 
-349990.batch  COMPLETED   00:00:49            c006         80 
-349990.exte+  COMPLETED   00:00:49            c006         80 
-349990.0      COMPLETED   00:00:12            c006         80 
-349990.1      COMPLETED   00:00:04            c006         80 
-349990.2      COMPLETED   00:00:06            c006         80 
-349990.3      COMPLETED   00:00:11            c006         80 
-349990.4      COMPLETED   00:00:02            c006         80 
-349990.5      COMPLETED   00:00:14            c006         80 
+JobID           JobName      State    Elapsed        NodeList      NCPUS 
+------------ ---------- ---------- ---------- --------------- ---------- 
+350161        twice_job  COMPLETED   00:00:49            c004         80 
+350161.batch      batch  COMPLETED   00:00:49            c004         80 
+350161.exte+     extern  COMPLETED   00:00:49            c004         80 
+350161.0          seven  COMPLETED   00:00:14            c004         80 
+350161.1            two  COMPLETED   00:00:05            c004         80 
+350161.2            one  COMPLETED   00:00:02            c004         80 
+350161.3           five  COMPLETED   00:00:10            c004         80 
+350161.4            six  COMPLETED   00:00:12            c004         80 
+350161.5          three  COMPLETED   00:00:06            c004         80 
