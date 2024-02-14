@@ -1,0 +1,70 @@
+
+
+N = 10000
+Time needed to make K and f: 0.845381737
+Solver time elapsed: 8.112991571
+u = 
+[1.000e-04 2.000e-04 3.000e-04 ... 9.998e-01 9.999e-01 1.000e+00]
+The last term in u is: 1.0000000000123226
+
+
+
+
+N = 10000
+Time needed to make K and f: 0.826944828
+Solver time elapsed: 4.053285122
+u = 
+[1.000e-04 2.000e-04 3.000e-04 ... 9.998e-01 9.999e-01 1.000e+00]
+The last term in u is: 1.0000000000123226
+
+
+
+
+N = 10000
+Time needed to make K and f: 0.839633942
+Solver time elapsed: 2.330218077
+u = 
+[1.000e-04 2.000e-04 3.000e-04 ... 9.998e-01 9.999e-01 1.000e+00]
+The last term in u is: 1.0000000000123226
+
+
+
+
+N = 10000
+Time needed to make K and f: 0.935750723
+Solver time elapsed: 1.486870527
+u = 
+[1.000e-04 2.000e-04 3.000e-04 ... 9.998e-01 9.999e-01 1.000e+00]
+The last term in u is: 1.0000000000123226
+
+
+
+
+N = 10000
+Time needed to make K and f: 0.839709282
+Solver time elapsed: 1.064091921
+u = 
+[1.000e-04 2.000e-04 3.000e-04 ... 9.998e-01 9.999e-01 1.000e+00]
+The last term in u is: 1.0000000000123226
+
+
+
+
+N = 10000
+Time needed to make K and f: 0.819494247
+Solver time elapsed: 0.994853735
+u = 
+[1.000e-04 2.000e-04 3.000e-04 ... 9.998e-01 9.999e-01 1.000e+00]
+The last term in u is: 1.0000000000123226
+
+
+
+
+N = 10000
+Time needed to make K and f: 0.817552328
+Solver time elapsed: 0.997484922
+u = 
+[1.000e-04 2.000e-04 3.000e-04 ... 9.998e-01 9.999e-01 1.000e+00]
+The last term in u is: 1.0000000000123226
+
+
