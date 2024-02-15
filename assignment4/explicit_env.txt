@@ -1,0 +1,3 @@
+# packages in environment at /home/avj416/.conda/envs/envTeam1:
+#
+# Name                    Version                   Build  Channel
