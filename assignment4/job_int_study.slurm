@@ -13,17 +13,11 @@ module load anaconda3
 
 conda activate envTeam1
 
-export OMP_NUM_THREADS=1
-export NUMEXPR_NUM_THREADS=1
-
-python3 integral.py
-
-
-for ((i = 2; i <= 8; i += 2))
+for ((i = 1; i <= 8; i = i*2))
 do
     export OMP_NUM_THREADS=$i
     export NUMEXPR_NUM_THREADS=$i
     python3 integral.py
-    echo $i
+    #echo $i
    
 done
