@@ -13,31 +13,31 @@ module load anaconda3
 
 conda activate envTeam1
 
-export OPENBLAS_NUM_THREADS=1
+export MKL_NUM_THREADS=1
 
 python3 linalg.py
 
-export OPENBLAS_NUM_THREADS=2
+export MKL_NUM_THREADS=2
 
 python3 linalg.py
 
-export OPENBLAS_NUM_THREADS=4
+export MKL_NUM_THREADS=4
 
 python3 linalg.py
 
-export OPENBLAS_NUM_THREADS=8
+export MKL_NUM_THREADS=8
 
 python3 linalg.py
 
-export OPENBLAS_NUM_THREADS=16
+export MKL_NUM_THREADS=16
 
 python3 linalg.py
 
-export OPENBLAS_NUM_THREADS=20
+export MKL_NUM_THREADS=20
 
 python3 linalg.py
 
-export OPENBLAS_NUM_THREADS=40
+export MKL_NUM_THREADS=40
 
 python3 linalg.py
 

@@ -56,7 +56,7 @@ tnp_f = tm.time()
 
 tnp_el = tnp_f-tnp_0
 
-print('\nTime elapsed for (BLAS-based) vectorization: '+str(round(tnp_el,6)))
+print('\nTime elapsed for NumPy vectorization: '+str(round(tnp_el,6)))
 print('The Integral evaluates as: '+str(F2))
 
 
@@ -75,7 +75,7 @@ F3 = ne.evaluate('sum(F_vec)')
 tne_f = tm.time()
 tne_e = tne_f-tne_0
 
-print('\nTime elapsed for (BLAS-based) NumExpr Evaluation: '+str(round(tne_e,6)))
+print('\nTime elapsed for NumExpr Evaluation: '+str(round(tne_e,6)))
 print('The Integral evaluates as: '+str(F3))
 
 print('')

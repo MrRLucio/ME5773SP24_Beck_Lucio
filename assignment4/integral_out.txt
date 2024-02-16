@@ -1,40 +1,40 @@
 
-Time elapsed using a for loop: 3.850630
+Time elapsed using a for loop: 3.822542
 The Integral evaluates as: 3.1415926534847225
 
-Time elapsed for (BLAS-based) vectorization: 0.159389
+Time elapsed for NumPy vectorization: 0.171672
 The Integral evaluates as: 3.141592653484607
 
-Time elapsed for (BLAS-based) NumExpr Evaluation: 0.143657
+Time elapsed for NumExpr Evaluation: 0.145982
 The Integral evaluates as: 3.1415926534847225
 
 
-Time elapsed using a for loop: 3.534741
+Time elapsed using a for loop: 3.456882
 The Integral evaluates as: 3.1415926534847225
 
-Time elapsed for (BLAS-based) vectorization: 0.165173
+Time elapsed for NumPy vectorization: 0.16213
 The Integral evaluates as: 3.141592653484607
 
-Time elapsed for (BLAS-based) NumExpr Evaluation: 0.167884
+Time elapsed for NumExpr Evaluation: 0.171719
 The Integral evaluates as: 3.1415926534847225
 
 
-Time elapsed using a for loop: 3.661222
+Time elapsed using a for loop: 3.537100
 The Integral evaluates as: 3.1415926534847225
 
-Time elapsed for (BLAS-based) vectorization: 0.161471
+Time elapsed for NumPy vectorization: 0.166055
 The Integral evaluates as: 3.141592653484607
 
-Time elapsed for (BLAS-based) NumExpr Evaluation: 0.137633
+Time elapsed for NumExpr Evaluation: 0.1388
 The Integral evaluates as: 3.1415926534847225
 
 
-Time elapsed using a for loop: 3.620561
+Time elapsed using a for loop: 3.699821
 The Integral evaluates as: 3.1415926534847225
 
-Time elapsed for (BLAS-based) vectorization: 0.162193
+Time elapsed for NumPy vectorization: 0.165074
 The Integral evaluates as: 3.141592653484607
 
-Time elapsed for (BLAS-based) NumExpr Evaluation: 0.114926
+Time elapsed for NumExpr Evaluation: 0.117345
 The Integral evaluates as: 3.1415926534847225
 
