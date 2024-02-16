@@ -1,0 +1,32 @@
+
+     active environment : base
+    active env location : /apps/anaconda3/current
+            shell level : 3
+       user config file : /home/avj416/.condarc
+ populated config files : /home/avj416/.condarc
+          conda version : 4.10.1
+    conda-build version : 3.21.4
+         python version : 3.8.8.final.0
+       virtual packages : __linux=3.10.0=0
+                          __glibc=2.17=0
+                          __unix=0=0
+                          __archspec=1=x86_64
+       base environment : /apps/anaconda3/current  (read only)
+      conda av data dir : /apps/anaconda3/current/etc/conda
+  conda av metadata url : https://repo.anaconda.com/pkgs/main
+           channel URLs : https://conda.anaconda.org/conda-forge/linux-64
+                          https://conda.anaconda.org/conda-forge/noarch
+                          https://repo.anaconda.com/pkgs/main/linux-64
+                          https://repo.anaconda.com/pkgs/main/noarch
+                          https://repo.anaconda.com/pkgs/r/linux-64
+                          https://repo.anaconda.com/pkgs/r/noarch
+          package cache : /apps/anaconda3/current/pkgs
+                          /home/avj416/.conda/pkgs
+       envs directories : /home/avj416/.conda/envs
+                          /apps/anaconda3/current/envs
+               platform : linux-64
+             user-agent : conda/4.10.1 requests/2.31.0 CPython/3.8.8 Linux/3.10.0-1160.88.1.el7.x86_64 centos/7.9.2009 glibc/2.17
+                UID:GID : 1477384394:1477384394
+             netrc file : None
+           offline mode : False
+

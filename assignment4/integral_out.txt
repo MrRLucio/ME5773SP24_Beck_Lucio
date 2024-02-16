@@ -1,0 +1,54 @@
+
+Time elapsed using a for loop: 3.633473
+The Integral evaluates as: 3.1415926534847225
+
+Time elapsed for (BLAS-based) vectorization: 0.163791
+The Integral evaluates as: 3.141592653484607
+
+Time elapsed for (BLAS-based) NumExpr Evaluation: 0.145779
+The Integral evaluates as: 3.1415926534847225
+
+
+Time elapsed using a for loop: 3.551208
+The Integral evaluates as: 3.1415926534847225
+
+Time elapsed for (BLAS-based) vectorization: 0.161018
+The Integral evaluates as: 3.141592653484607
+
+Time elapsed for (BLAS-based) NumExpr Evaluation: 0.167936
+The Integral evaluates as: 3.1415926534847225
+
+2
+
+Time elapsed using a for loop: 3.514872
+The Integral evaluates as: 3.1415926534847225
+
+Time elapsed for (BLAS-based) vectorization: 0.162178
+The Integral evaluates as: 3.141592653484607
+
+Time elapsed for (BLAS-based) NumExpr Evaluation: 0.136647
+The Integral evaluates as: 3.1415926534847225
+
+4
+
+Time elapsed using a for loop: 3.513636
+The Integral evaluates as: 3.1415926534847225
+
+Time elapsed for (BLAS-based) vectorization: 0.162593
+The Integral evaluates as: 3.141592653484607
+
+Time elapsed for (BLAS-based) NumExpr Evaluation: 0.126049
+The Integral evaluates as: 3.1415926534847225
+
+6
+
+Time elapsed using a for loop: 3.553782
+The Integral evaluates as: 3.1415926534847225
+
+Time elapsed for (BLAS-based) vectorization: 0.162104
+The Integral evaluates as: 3.141592653484607
+
+Time elapsed for (BLAS-based) NumExpr Evaluation: 0.114618
+The Integral evaluates as: 3.1415926534847225
+
+8
