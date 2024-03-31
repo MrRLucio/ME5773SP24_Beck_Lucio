@@ -10,10 +10,9 @@
 #SBATCH --nodes=1
 
 #getting the anaconda ready
-module load anaconda3
+ml anaconda3
 
-source activate hpc
 
 #module load mpich#?
-mpirun -n $SLURM_NTASKS python3 part.py
+mpirun -n $SLURM_NTASKS python3 part1.py
 
