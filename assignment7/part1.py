@@ -94,9 +94,9 @@ Output = comm.gather(data, root=0)
 
 if rank == 0:
     
-    print("Quadrature #,          Integration Result,          Percent Error,         Run Time (s)")
+    print("Quadrature #,          Integration Result,                     Percent Error,                      Run Time (s)")
     for i in range(1, size):
-        print(f"     {Output[i][0]}   \t\t    {Output[i][1]:.16f}     \t \t \t {Output[i][2]}\t \t{Output[i][3]}")
+        print(f"     {Output[i][0]}      \t\t      {Output[i][1]:.16E}              {Output[i][2]:.16E}              {Output[i][3]}")
     
 
 

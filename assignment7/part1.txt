@@ -1,122 +1,29 @@
-from mpi4py import MPI
-import math
-import time
+--------------------------------------------------------------------------
+WARNING: There was an error initializing an OpenFabrics device.
 
-def f(x):
-    return x*math.exp(x)
-
-############################################
-def gauleg(x1, x2, x, w, n):
-    EPS = 3.0e-16
-    m = (n + 1) // 2
-    xm = 0.50 * (x2 + x1)
-    xl = 0.50 * (x2 - x1)
-    
-    for i in range(1, m + 1):
-        z = math.cos(math.pi * (i - 0.25) / (n + 0.50))
-        while True:
-            p1 = 1.0
-            p2 = 0.0
-            for j in range(1, n + 1):
-                p3 = p2
-                p2 = p1
-                p1 = ((2.0 * j - 1.0) * z * p2 - (j - 1.0) * p3) / j
-            
-            pp = n * (z * p1 - p2) / (z * z - 1.0)
-            z1 = z
-            z = z1 - p1 / pp
-            
-            if abs(z - z1) > EPS:
-                continue
-            
-            x[i - 1] = xm - xl * z
-            x[n - i] = xm + xl * z
-            w[i - 1] = 2.0 * xl / ((1.0 - z * z) * pp * pp)
-            w[n - i] = w[i - 1]
-            break
-#######################################################################
-
-
-#Set up the MPI process
-comm = MPI.COMM_WORLD
-
-#acquire the total number of tasks
-size = comm.Get_size()
-
-#Get each task's ID
-rank = comm.Get_rank()
-
-inputs = []
-
-if rank == 0:
-    
-    for x in range(size):
-        slc = [x, 0, 0, 0]
-        inputs.append(slc)
-    
-    #print("The Gaussian Quadrature n values are: ", inputs[:][0] )
-
-else:
-    inputs = None
-
-data = comm.scatter(inputs, root=0)
-
-
-#Doing the Quadratures
-if rank != 0:
-    #begin timer
-    start = time.perf_counter()
-
-    #performing the Gaussian-Legendre Int.
-    n = data[0]
-    x = [0.0] * n
-    w = [0.0] * n
-    x1, x2 = -1.0, 1.0
-    gauleg(x1, x2, x, w, n)
-    #print("x =", x)
-    #print("w =", w)
-    
-    sum = 0.0
-    for i in range(0,n):
-        sum = sum + w[i]*f(x[i])
-    data[1] = sum
-    #print("Process ", rank, "of n=", data, f"has sum = ",{sum})
-    exact = 2/math.exp(1)
-    RE = abs(sum-exact)/exact
-    data[2] = RE
-    #print("Process ", rank, "of n=", data, f"has relative error =",{RE})
-    finish = time.perf_counter()
-    elapsed = finish - start
-    data[3] = elapsed
-    #print("Process ", rank, "of n=", data, f"took {elapsed} seconds")
-
-Output = comm.gather(data, root=0)
-
-if rank == 0:
-    
-    print("Quadrature #,          Integration Result,          Percent Error,         Run Time (s)")
-    for i in range(1, size):
-        print(f"     {Output[i][0]}   \t\t    {Output[i][1]:.16f}     \t \t \t {Output[i][2]}\t \t{Output[i][3]}")
-    
-
-
-'''
-# Example usage:
-n = 3
-x = [0.0] * n
-w = [0.0] * n
-x1, x2 = -1.0, 1.0
-gauleg(x1, x2, x, w, n)
-print("x =", x)
-print("w =", w)
-
-sum = 0.0
-for i in range(0,n):
-    sum = sum + w[i]*f(x[i])
-print(f"sum = ",{sum})
-exact = 2/math.exp(1)
-print(f"Relative error =",{abs(sum-exact)/exact})
-'''
-
-
-
+  Local host:   c001
+  Local device: mlx5_0
+--------------------------------------------------------------------------
+Quadrature #,          Integration Result,                     Percent Error,                      Run Time (s)
+     1      		      0.0000000000000000E+00              1.0000000000000000E+00              0.0015888884663581848
+     2      		      7.0432590948309248E-01              4.2721839469609724E-02              0.0009420476853847504
+     3      		      7.3536214416085310E-01              5.3922309543613873E-04              0.0015444206073880196
+     4      		      7.3575650676085402E-01              3.2287507329578091E-06              0.0009056553244590759
+     5      		      7.3575887406109741E-01              1.1256115902549103E-08              0.0015242332592606544
+     6      		      7.3575888232400810E-01              2.5655914497532635E-11              0.0008979253470897675
+     7      		      7.3575888234285436E-01              4.1194322351574237E-14              0.0015284307301044464
+     8      		      7.3575888234288578E-01              1.5089495366877009E-15              0.0009365780279040337
+     9      		      7.3575888234288556E-01              1.2071596293501608E-15              0.00503094308078289
+     10      		      7.3575888234288378E-01              1.2071596293501608E-15              0.0009798947721719742
+     11      		      7.3575888234288445E-01              3.0178990733754020E-16              0.0015040924772620201
+     12      		      7.3575888234288433E-01              4.5268486100631032E-16              0.005781756713986397
+     13      		      7.3575888234288422E-01              6.0357981467508039E-16              0.001509825699031353
+     14      		      7.3575888234288533E-01              9.0536972201262064E-16              0.000917576253414154
+     15      		      7.3575888234288334E-01              1.8107394440252413E-15              0.0014687059447169304
+     16      		      7.3575888234288467E-01              0.0000000000000000E+00              0.001001463271677494
+     17      		      7.3575888234288445E-01              3.0178990733754020E-16              0.0015002954751253128
+     18      		      7.3575888234288445E-01              3.0178990733754020E-16              0.0010388856753706932
+     19      		      7.3575888234288489E-01              3.0178990733754020E-16              0.0014976589009165764
+     20      		      7.3575888234288511E-01              6.0357981467508039E-16              0.0007842620834708214
+[c001:111334] 20 more processes have sent help message help-mpi-btl-openib.txt / error in device init
+[c001:111334] Set MCA parameter "orte_base_help_aggregate" to 0 to see all help / error messages

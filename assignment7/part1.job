@@ -1,7 +1,7 @@
 #!/bin/bash
 #
 #SBATCH --job-name=part1
-#SBATCH --output=HW7out.txt
+#SBATCH --output=part1.txt
 #SBATCH --partition=compute1
 #SBATCH --time=00:10:00
 # #SBATCH --mail-type=ALL
