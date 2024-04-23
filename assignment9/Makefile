@@ -17,7 +17,7 @@ searchutils.mod: searchutils.f90
 	ranlib libsearchutils.a
 
 
-main_program.exe: main_program.f90
+main_program.exe: main_program.f90 searchutils.f90
 
 	$(FC) $^ -o $@ $(FCFLAGS) -lsearchutils
 
