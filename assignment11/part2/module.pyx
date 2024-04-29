@@ -65,7 +65,7 @@ def mkl_solver(double[:,::1] A, double[:,::1] B):
 
 # end function
 
-def mkl_solver_symm(double[:,::1] A, double[:,::1] B):
+def mkl_solver_symm(double[:,::1] A, double[:,::1] B ):
     """
     Function that uses MKL's LAPACK DSYSV routine to solve a general system
     of equations. This uses an LU factorization approach.
@@ -84,15 +84,16 @@ def mkl_solver_symm(double[:,::1] A, double[:,::1] B):
     """
     cdef int64_t lda, ldb, n, nrhs, matrix_layout
     cdef int64_t[:] ipiv_memview, i
-    cdef char UPLO
+    cdef char UPLO 
     
     matrix_layout = 101 # Row major
     
-    UPLO = 'U' # For the homework, let's just keep the Upper Factor Matrix
 
     lda = A.shape[1]
     ldb = B.shape[1]
     
+    UPLO = 'L'
+
     n = A.shape[0]
     nrhs = B.shape[1]
     
